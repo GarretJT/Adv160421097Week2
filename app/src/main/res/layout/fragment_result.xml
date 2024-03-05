@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="80dp"
+        android:gravity="center">
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:text="Game Over" />
+
+        <TextView
+            android:id="@+id/score"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your score is X" />
+
+        <Button
+            android:layout_marginTop="36dp"
+            android:id="@+id/btnBackToMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Main Screen"/>
+
+    </LinearLayout>
+</FrameLayout>
