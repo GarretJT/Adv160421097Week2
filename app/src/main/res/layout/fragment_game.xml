@@ -66,5 +66,19 @@
                 android:hint="Your Answer" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/buttonTestFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="125dp"
+            android:text="Test Fragment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+            app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

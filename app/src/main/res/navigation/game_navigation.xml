@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/itemHome">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/itemHome"
         android:name="com.example.adv160421097week2.MainFragment"
         android:label="Main Screen"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/actionOptionFragment"
+            app:destination="@id/optionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -28,17 +31,41 @@
         <action
             android:id="@+id/action_gameFragment_to_resultFragment2"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/actionTestFragment"
+            app:destination="@id/testFragment"
+            app:popUpTo="@id/itemHome" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.adv160421097week2.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        android:label="Result"
+        tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/itemHome" />
         <argument
             android:name="result"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.adv160421097week2.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.example.adv160421097week2.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.example.adv160421097week2.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/optionFragment"
+        android:name="com.example.adv160421097week2.OptionFragment"
+        android:label="Option"
+        tools:layout="@layout/fragment_option" />
 </navigation>
